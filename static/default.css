@@ -1,0 +1,66 @@
+.center {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.grid {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 200px 640px 200px;
+    justify-content: center;
+}
+
+.left_side {
+    background: #000;
+    color: lime;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    height: 80vh;
+    border-radius: 10px;
+}
+
+.video-box {
+    position: relative;
+    background: #000;
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 16 / 9;
+    width: 640px;
+    height: auto;
+    border-radius: 10px;
+}
+
+video {
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    width: 640px;
+    height: auto;
+    border-radius: 10px;
+}
+
+#graph {
+    background: #000;
+    border-radius: 10px;
+}
+
+.joystick {
+    position: absolute;
+    bottom: 20px;         /* 動画の下寄せ */
+    left: 20px;           /* 左寄せ */
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 0, 0.2); /* 半透明の円 */
+    border-radius: 50%;
+    touch-action: none;   /* スマホ用 */
+}
+.stick {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -20px;
+    background: rgba(255,255,0,0.2);
+    border-radius: 50%;
+}
