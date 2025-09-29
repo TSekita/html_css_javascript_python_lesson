@@ -3,13 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <meta lang="ja">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>index.html</title>
         <link rel="stylesheet" href="static\default.css">
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
         <script src="static\graph.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     </head>
     <body>
-        <h1 class="center">Hello, World!</h1>
+        <h2 class="center">Hello, World!</h2>
         <div class="grid">
             <div class="left_side">
                 <ul>
@@ -44,11 +46,19 @@
                 </ul>
             </div>
             <div class="video-box">
+                <!--
                 <video controls>
                     <source src="static\file_example_MP4_1920_18MG.mp4", type="video/mp4">
-                    <!-- <source src="sample.mp4", type="video/mp4"> -->
-                    
                 </video>
+                -->
+                <iframe id="webrtc" class="video"
+                    src="http://PI_IP:8080/players/rtc.html?app=live&stream=cam&autostart=true"
+                    allow="camera; microphone; autoplay">
+                </iframe>
+                <div class="controls">
+                    <buItton class="btn" onclick="play()">再生</button>
+                    <button class="btn" onclick="stop()">停止</button>
+                </div>
                 <div class="joystick">
                     <div class="stick"></div>
                 </div>
